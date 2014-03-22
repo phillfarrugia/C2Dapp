@@ -72,13 +72,6 @@
 }
 
 - (void)populateTextViewsForDictionary {
-    // Get a random object from data
-    /*int dataRange = [self.results count];
-    int random = arc4random_uniform(dataRange);
-    NSDictionary *info = [self.results objectAtIndex:random];
-    NSLog(@"IIIIIII");
-    NSLog(@"%@", info);
-    NSLog(@"JJJJJJJ");*/
     
     int dataRange = [self.results count];
     int random = arc4random_uniform(dataRange);
@@ -109,12 +102,14 @@
     
     // Set all other values
     
+    NSLog(@"INFO ------ \n %@", info);
+    
     self.shopTitle.text = [info valueForKey:@"name"];
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
-    self.shopPriceValue.text = [info valueForKey:@"price_level"];
-    NSLog(@"HI");
     
-    //NSLog(@"%@", self.shopTitle.text);
+    NSString *price = [NSString stringWithFormat:@"%@", [info valueForKey:@"price_level"]];
+   self.shopPriceValue.text = price;
+    NSLog(@"HI");
 }
 
 - (void)didReceiveMemoryWarning
