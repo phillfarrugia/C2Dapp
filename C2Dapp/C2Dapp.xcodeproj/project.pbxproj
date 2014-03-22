@@ -37,6 +37,7 @@
 		F7B6E30518DD346800C60E56 /* HFBGeometryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B6E30418DD346800C60E56 /* HFBGeometryModel.m */; };
 		F7B6E30818DD360100C60E56 /* HFBOpenHoursModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B6E30718DD360100C60E56 /* HFBOpenHoursModel.m */; };
 		F7B6E30B18DD39AF00C60E56 /* HFBShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B6E30A18DD39AF00C60E56 /* HFBShopViewController.m */; };
+		F7E761C518DDCB9400DCD2C9 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E761C418DDCB9400DCD2C9 /* Images-2.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		F7B6E30718DD360100C60E56 /* HFBOpenHoursModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBOpenHoursModel.m; sourceTree = "<group>"; };
 		F7B6E30918DD39AF00C60E56 /* HFBShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBShopViewController.h; sourceTree = "<group>"; };
 		F7B6E30A18DD39AF00C60E56 /* HFBShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBShopViewController.m; sourceTree = "<group>"; };
+		F7E761C418DDCB9400DCD2C9 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		F7FEAEB418DDD2B900D3F300 /* default-portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-portrait.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,7 @@
 		F7B6E2AD18DD160500C60E56 = {
 			isa = PBXGroup;
 			children = (
+				F7FEAEB418DDD2B900D3F300 /* default-portrait.png */,
 				F7B6E2F918DD1E8300C60E56 /* Model */,
 				F7B6E2F618DD1E4C00C60E56 /* View */,
 				F7B6E2F818DD1E7200C60E56 /* Controller */,
@@ -181,6 +185,7 @@
 				F7B6E2CB18DD160500C60E56 /* HFBAppDelegate.m */,
 				F7B6E2D018DD160500C60E56 /* Images.xcassets */,
 				F7B6E2CD18DD160500C60E56 /* C2Dapp.xcdatamodeld */,
+				F7E761C418DDCB9400DCD2C9 /* Images-2.xcassets */,
 				F7B6E2C218DD160500C60E56 /* Supporting Files */,
 			);
 			path = C2Dapp;
@@ -338,6 +343,7 @@
 				F7B6E2C618DD160500C60E56 /* InfoPlist.strings in Resources */,
 				F7B6E2EF18DD1D0600C60E56 /* main.storyboard in Resources */,
 				5195156D18DD66950066995A /* Media.xcassets in Resources */,
+				F7E761C518DDCB9400DCD2C9 /* Images-2.xcassets in Resources */,
 				F7B6E2D118DD160500C60E56 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "C2Dapp/C2Dapp-Prefix.pch";
 				INFOPLIST_FILE = "C2Dapp/C2Dapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -539,6 +546,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "C2Dapp/C2Dapp-Prefix.pch";
 				INFOPLIST_FILE = "C2Dapp/C2Dapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
