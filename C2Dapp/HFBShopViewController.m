@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *shopPrice;
 @property (weak, nonatomic) IBOutlet UILabel *shopPriceValue;
 @property (weak, nonatomic) IBOutlet UIImageView *shopPhoto;
+@property (strong, nonatomic) NSString* busID;
 
 @end
 
@@ -105,6 +106,9 @@
     NSString *price = [NSString stringWithFormat:@"%@", [info valueForKey:@"price_level"]];
     self.shopPriceValue.text = price;
     self.shopPrice.text = @"Price";
+        
+        self.busID = [info valueForKey:@"id"];
+        NSLog(@"Business ID ---- \n %@", [info valueForKey:@"id"]);
     }
 }
 

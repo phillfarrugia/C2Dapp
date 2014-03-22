@@ -11,8 +11,10 @@
 @interface HFBHungryViewController ()
 @property (weak, nonatomic) IBOutlet UIView *detailView;
 - (IBAction)swipeLeft:(id)sender;
+@property (strong, nonatomic) NSString* busID;
 
 @end
+
 
 @implementation HFBHungryViewController
 
@@ -90,6 +92,35 @@
 
 - (IBAction)swipeLeft:(id)sender {
     [self populateTextViewsForDictionary];
+    
+    UIDevice *device = [UIDevice currentDevice];
+    NSString  *currentDeviceId = [[device identifierForVendor]UUIDString];
+    
+    NSLog(@"DeviceID ---- \n %@", currentDeviceId);
+        NSLog(@"Business ID pre-post ---- \n %@", self.busID);
+    
+    // post data to personalisation database
+    
+    NSString *Post = [[NSString alloc] initWithFormat:@"&bizid=%@&deviceid=%@&like=0", self.busID, currentDeviceId];
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://hereforbeer.io/hbn/index.php?command=clientresponse&bizid=%@&deviceid=%@&like=0", self.busID, currentDeviceId];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSLog(urlString);
+    
+    NSData *PostData = [Post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%d", [PostData length]];
+    
+    NSMutableURLRequest *Request = [[NSMutableURLRequest alloc] init];
+    [Request setURL:url];
+    [Request setHTTPMethod:@"POST"];
+    [Request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [Request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [Request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [Request setHTTPBody:PostData];
+    
+    NSLog(@"Post Request Sent");
 }
 
 @end

@@ -345,9 +345,6 @@
                                     <constraint firstAttribute="height" constant="113" id="JLy-2k-ski"/>
                                     <constraint firstAttribute="width" constant="320" id="dYZ-1l-6th"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="pzy-DZ-JCJ" appends="YES" id="dBW-7n-YFm"/>
-                                </connections>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4X-dH-wY6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
@@ -373,7 +370,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PC9-Ya-i6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="pzy-DZ-JCJ"/>
+                <swipeGestureRecognizer direction="left" id="oVC-4y-gaF">
+                    <connections>
+                        <action selector="swipeLeft:" destination="Icu-Nw-IdD" id="f45-hM-kmg"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="586" y="635"/>
         </scene>

@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *shopPrice;
 @property (weak, nonatomic) IBOutlet UILabel *shopPriceValue;
 @property (weak, nonatomic) IBOutlet UIImageView *shopPhoto;
-- (IBAction)swipeLeft:(id)sender;
 
 @end
 
@@ -38,6 +37,7 @@
     swipeRight.numberOfTouchesRequired = 1;
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRight];
+
     
     CGRect newFrame = self.detailView.frame;
     newFrame.origin.y += -367;    // shift down by 500pts
@@ -62,7 +62,7 @@
                    ^{
                        NSData* data = [NSData dataWithContentsOfURL:
                                        [NSURL URLWithString:[NSString stringWithFormat:
-                                                             @"https://maps.googleapis.com/maps/api/place/textsearch/json?query=shopping&sensor=true&radius=1000&opennow&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc"]]];
+                                                             @"https://maps.googleapis.com/maps/api/place/textsearch/json?query=clothes&sensor=true&radius=1000&opennow&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc"]]];
                        [self performSelectorOnMainThread:@selector(fetchedData:)
                                               withObject:data waitUntilDone:YES];
                    });
@@ -97,7 +97,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)swipeLeft:(id)sender {
-    [self populateTextViewsForDictionary];
-}
 @end
