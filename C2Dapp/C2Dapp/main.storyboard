@@ -155,6 +155,10 @@
                                     <constraint firstAttribute="height" constant="113" id="oML-t5-29z"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Da-bH-ZAS">
+                                <rect key="frame" x="0.0" y="184" width="320" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -169,6 +173,7 @@
                     <navigationItem key="navigationItem" id="J4H-qu-xvq"/>
                     <connections>
                         <outlet property="shopAddress" destination="Xvs-mn-MSf" id="GP1-xh-lzc"/>
+                        <outlet property="shopPhoto" destination="6Da-bH-ZAS" id="mLz-FZ-BPi"/>
                         <outlet property="shopPrice" destination="fE2-2p-SgB" id="3tP-52-F7Z"/>
                         <outlet property="shopPriceValue" destination="p0U-4V-jBc" id="5hg-8P-4lA"/>
                         <outlet property="shopTitle" destination="kZC-rz-pQb" id="j3f-ao-8Mq"/>
