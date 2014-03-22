@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-FontAwesomeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>91F3A910256E4D02816A4633</key>
+		<key>63130D72DA904E858781CDA3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0B6106BD6824FFC96C7F64A</key>
+		<key>A03DAC786C2044629468B18F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F61C1314F1BD498A9695FB79</key>
 		<dict>
 			<key>primary</key>
 			<true/>

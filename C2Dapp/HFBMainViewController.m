@@ -11,12 +11,16 @@
 #import "JSONModelLib.h"
 #import "HFBDataModel.h"
 #import "HFBFeed.h"
+#import "FontAwesomeKit/FontAwesomeKit.h"
 
 @interface HFBMainViewController () {
 
     HFBFeed* _feed;
 
 }
+@property (weak, nonatomic) IBOutlet UIImageView *hungryIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *boredIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *nakedIcon;
 
 @end
 
@@ -35,17 +39,23 @@
 {
     [super viewDidLoad];
     
+    // Hungry Icon
+    FAKFontAwesome *cutleryIcon = [FAKFontAwesome cutleryIconWithSize:50];
+    [cutleryIcon addAttribute:NSForegroundColorAttributeName value:[UIColor
+                                                                 whiteColor]];
+    self.hungryIcon.image = [cutleryIcon imageWithSize:CGSizeMake(50, 50)];
     
-    // Fetch Data from Google Places API
-    _feed = [[HFBFeed alloc] initFromURLWithString:@"http://hereforbeer.io/test-google-json.json"
-                                        completion:^(JSONModel *model, JSONModelError *err) {
-                                            
-                                            // Display in console
-                                            NSLog(@"%@", _feed.results);
-                                            
-                                        }];
+    // Bored Icon
+    FAKFontAwesome *trophyIcon = [FAKFontAwesome trophyIconWithSize:50];
+    [trophyIcon addAttribute:NSForegroundColorAttributeName value:[UIColor
+                                                                    whiteColor]];
+    self.boredIcon.image = [trophyIcon imageWithSize:CGSizeMake(50, 50)];
     
-    
+    // Naked Icon
+    FAKIonIcons *tagsIcon = [FAKIonIcons pricetagsIconWithSize:45];
+    [tagsIcon addAttribute:NSForegroundColorAttributeName value:[UIColor
+                                                                    whiteColor]];
+    self.nakedIcon.image = [tagsIcon imageWithSize:CGSizeMake(45, 45)];
     
 }
 

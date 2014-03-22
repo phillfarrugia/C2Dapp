@@ -84,6 +84,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ykx-xB-Sip">
+                                <rect key="frame" x="210" y="146" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2E-i4-1bD">
+                                <rect key="frame" x="210" y="256" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xy-15-r5o">
+                                <rect key="frame" x="212" y="375" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.98533624410629272" green="0.95081600321144011" blue="0.92282560476047548" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -98,6 +110,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rwo-Jx-vV5"/>
+                    <connections>
+                        <outlet property="boredIcon" destination="q2E-i4-1bD" id="PTx-Kb-IHE"/>
+                        <outlet property="hungryIcon" destination="Ykx-xB-Sip" id="NT1-19-WM9"/>
+                        <outlet property="nakedIcon" destination="5xy-15-r5o" id="KED-v5-HTP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2N3-ox-pnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

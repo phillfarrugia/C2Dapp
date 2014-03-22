@@ -38,8 +38,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Initiates Asynchronous request for Shop View Data
     [self asyncRequest];
 }
 
@@ -78,8 +76,6 @@
     NSDictionary *info = [self.results objectAtIndex:random];
     
     NSString *photoReference = [NSString stringWithFormat:@"%@",[info valueForKeyPath:@"photos.photo_reference"]];
-    
-    NSLog(@"PHOTO REFERENCE -- \n %@", photoReference);
     NSString *photoReferenceClean = @"";
     
     // Checks for photo and cleans photoReference
