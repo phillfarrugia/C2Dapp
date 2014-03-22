@@ -9,6 +9,12 @@
 #import "HFBBoredViewController.h"
 
 @interface HFBBoredViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *shopTitle;
+@property (weak, nonatomic) IBOutlet UILabel *shopAddress;
+@property (weak, nonatomic) IBOutlet UILabel *shopPrice;
+@property (weak, nonatomic) IBOutlet UILabel *shopPriceValue;
+@property (weak, nonatomic) IBOutlet UIImageView *shopPhoto;
+- (IBAction)swipeLeft:(id)sender;
 
 @end
 
@@ -26,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    
     // Do any additional setup after loading the view.
     [self asyncRequest];
 }
@@ -72,4 +80,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)swipeLeft:(id)sender {
+    [self populateTextViewsForDictionary];
+    
+    [UIView transitionWithView:self.view
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations:^{
+                    } completion:nil];
+}
 @end

@@ -89,6 +89,12 @@
 
 - (IBAction)swipeLeft:(id)sender {
     [self populateTextViewsForDictionary];
+    
+    [UIView transitionWithView:self.view
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations:^{
+                    } completion:nil];
 }
 
 @end
