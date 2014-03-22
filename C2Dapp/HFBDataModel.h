@@ -29,11 +29,12 @@
 //@property (strong, nonatomic) NSString* vicinity;
 //@property (strong, nonatomic) NSString* formatted_phone_number;
 
-//@property (strong, nonatomic) NSString<Optional>* price_level;
+@property (strong, nonatomic) NSString<Optional>* price_level;
 //@property (assign, nonatomic) double rating;
 
 @property (strong, nonatomic) NSArray* types;
 
+@property (strong, nonatomic) NSArray* photos;
 
 // TODO: Add Photo Requests
 //@property (strong, nonatomic) NSArray* photos;

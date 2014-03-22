@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *shopTitle;
 @property (weak, nonatomic) IBOutlet UILabel *shopAddress;
 @property (weak, nonatomic) IBOutlet UILabel *shopPrice;
+@property (weak, nonatomic) IBOutlet UILabel *shopPriceValue;
 
 @end
 
@@ -40,9 +41,10 @@
     int random = arc4random_uniform(dataRange);
     NSDictionary *info = [self.results objectAtIndex:random];
     
+    self.title = [info valueForKey:@"name"];
     self.shopTitle.text = [info valueForKey:@"name"];
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
-//    self.shopPrice.text = [info valueForKey:@"price_level"];
+    self.shopPriceValue.text = [info valueForKey:@"price_level"];
     
 }
 
