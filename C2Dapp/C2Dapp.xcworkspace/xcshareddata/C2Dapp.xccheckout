@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>69722B50-A452-4A9F-81A9-A77C829E71E7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>C2Dapp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</key>
+		<string>https://github.com/phillfarrugia/HFBapp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>C2Dapp/C2Dapp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/phillfarrugia/HFBapp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HFBapp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
