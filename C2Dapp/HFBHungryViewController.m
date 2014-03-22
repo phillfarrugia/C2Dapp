@@ -9,6 +9,7 @@
 #import "HFBHungryViewController.h"
 
 @interface HFBHungryViewController ()
+@property (weak, nonatomic) IBOutlet UIView *detailView;
 
 @end
 
@@ -26,7 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CGRect newFrame = self.detailView.frame;
+    newFrame.origin.y += -367;    // shift down by 500pts
+    
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         self.detailView.frame = newFrame;
+                     }];
+
     [self asyncRequest];
 }
 
