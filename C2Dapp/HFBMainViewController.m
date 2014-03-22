@@ -35,6 +35,7 @@
 {
     [super viewDidLoad];
     
+    
     // Fetch Data from Google Places API
     _feed = [[HFBFeed alloc] initFromURLWithString:@"http://hereforbeer.io/test-google-json.json"
                                         completion:^(JSONModel *model, JSONModelError *err) {

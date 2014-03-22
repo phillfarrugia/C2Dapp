@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>69722B50-A452-4A9F-81A9-A77C829E71E7</string>
+	<string>0D56303C-929C-4781-9EDD-27CDA5A27A3C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>C2Dapp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</key>
-		<string>https://github.com/phillfarrugia/HFBapp.git</string>
+		<key>8DA8717D-F6BF-4C31-AE18-D9267C4FBA25</key>
+		<string>https://github.com/phillfarrugia/C2Dapp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>C2Dapp/C2Dapp.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</key>
+		<key>8DA8717D-F6BF-4C31-AE18-D9267C4FBA25</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/phillfarrugia/HFBapp.git</string>
+	<string>https://github.com/phillfarrugia/C2Dapp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</string>
+	<string>8DA8717D-F6BF-4C31-AE18-D9267C4FBA25</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CADCFFDB-A2CE-40B7-A86B-851D3F2D862F</string>
+			<string>8DA8717D-F6BF-4C31-AE18-D9267C4FBA25</string>
 			<key>IDESourceControlWCCName</key>
-			<string>HFBapp</string>
+			<string>C2Dapp</string>
 		</dict>
 	</array>
 </dict>

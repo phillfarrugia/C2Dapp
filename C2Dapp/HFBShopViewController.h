@@ -11,5 +11,7 @@
 @interface HFBShopViewController : UIViewController
 
 @property (strong, nonatomic) NSArray* results;
+- (IBAction)goBackGesture:(id)sender;
+- (void)populateTextViewsForDictionary;
 
 @end

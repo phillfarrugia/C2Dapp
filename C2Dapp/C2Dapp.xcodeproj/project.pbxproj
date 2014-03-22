@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		515C1D4718DD836E00770B81 /* HFBHungryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C1D4618DD836E00770B81 /* HFBHungryViewController.m */; };
+		515C1D4A18DD841400770B81 /* HFBBoredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C1D4918DD841400770B81 /* HFBBoredViewController.m */; };
+		515C1D4D18DD841E00770B81 /* HFBNakedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C1D4C18DD841E00770B81 /* HFBNakedViewController.m */; };
+		5195156D18DD66950066995A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195156C18DD66950066995A /* Media.xcassets */; };
 		63F0E5AD93CB49D48461738E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3293C82D95B4E90950EB515 /* libPods.a */; };
 		F7AB7EA718DD54DD00D5FE96 /* HFBPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7EA618DD54DD00D5FE96 /* HFBPhotoModel.m */; };
 		F7AB7EAA18DD591600D5FE96 /* HFBPhotoFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7EA918DD591600D5FE96 /* HFBPhotoFeed.m */; };
@@ -47,6 +51,13 @@
 
 /* Begin PBXFileReference section */
 		0C750BC84FE945939D431D42 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		515C1D4518DD836E00770B81 /* HFBHungryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBHungryViewController.h; sourceTree = "<group>"; };
+		515C1D4618DD836E00770B81 /* HFBHungryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBHungryViewController.m; sourceTree = "<group>"; };
+		515C1D4818DD841400770B81 /* HFBBoredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBBoredViewController.h; sourceTree = "<group>"; };
+		515C1D4918DD841400770B81 /* HFBBoredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBBoredViewController.m; sourceTree = "<group>"; };
+		515C1D4B18DD841E00770B81 /* HFBNakedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBNakedViewController.h; sourceTree = "<group>"; };
+		515C1D4C18DD841E00770B81 /* HFBNakedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBNakedViewController.m; sourceTree = "<group>"; };
+		5195156C18DD66950066995A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F3293C82D95B4E90950EB515 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AB7EA518DD54DD00D5FE96 /* HFBPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBPhotoModel.h; sourceTree = "<group>"; };
 		F7AB7EA618DD54DD00D5FE96 /* HFBPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBPhotoModel.m; sourceTree = "<group>"; };
@@ -114,6 +125,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		515C1D4418DD835400770B81 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				515C1D4518DD836E00770B81 /* HFBHungryViewController.h */,
+				515C1D4618DD836E00770B81 /* HFBHungryViewController.m */,
+				515C1D4818DD841400770B81 /* HFBBoredViewController.h */,
+				515C1D4918DD841400770B81 /* HFBBoredViewController.m */,
+				515C1D4B18DD841E00770B81 /* HFBNakedViewController.h */,
+				515C1D4C18DD841E00770B81 /* HFBNakedViewController.m */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 		F7B6E2AD18DD160500C60E56 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				F7B6E2EE18DD1D0600C60E56 /* main.storyboard */,
+				5195156C18DD66950066995A /* Media.xcassets */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -202,6 +227,7 @@
 		F7B6E2F818DD1E7200C60E56 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				515C1D4418DD835400770B81 /* SubViews */,
 				F7B6E2F318DD1D5300C60E56 /* HFBMainViewController.h */,
 				F7B6E2F418DD1D5300C60E56 /* HFBMainViewController.m */,
 				F7B6E30918DD39AF00C60E56 /* HFBShopViewController.h */,
@@ -311,6 +337,7 @@
 			files = (
 				F7B6E2C618DD160500C60E56 /* InfoPlist.strings in Resources */,
 				F7B6E2EF18DD1D0600C60E56 /* main.storyboard in Resources */,
+				5195156D18DD66950066995A /* Media.xcassets in Resources */,
 				F7B6E2D118DD160500C60E56 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515C1D4718DD836E00770B81 /* HFBHungryViewController.m in Sources */,
 				F7B6E2C818DD160500C60E56 /* main.m in Sources */,
+				515C1D4A18DD841400770B81 /* HFBBoredViewController.m in Sources */,
 				F7B6E30B18DD39AF00C60E56 /* HFBShopViewController.m in Sources */,
 				F7B6E30818DD360100C60E56 /* HFBOpenHoursModel.m in Sources */,
 				F7AB7EA718DD54DD00D5FE96 /* HFBPhotoModel.m in Sources */,
@@ -374,6 +403,7 @@
 				F7B6E2F518DD1D5300C60E56 /* HFBMainViewController.m in Sources */,
 				F7B6E30218DD300900C60E56 /* HFBFeed.m in Sources */,
 				F7B6E2CC18DD160500C60E56 /* HFBAppDelegate.m in Sources */,
+				515C1D4D18DD841E00770B81 /* HFBNakedViewController.m in Sources */,
 				F7AB7EAA18DD591600D5FE96 /* HFBPhotoFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
