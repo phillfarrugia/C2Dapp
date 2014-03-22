@@ -111,4 +111,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)swipeLeft:(id)sender {
+    NSLog(@"Swipe Left");
+    
+    [self populateTextViewsForDictionary];
+}
+
 @end

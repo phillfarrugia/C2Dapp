@@ -10,6 +10,7 @@
 
 @interface HFBHungryViewController ()
 @property (weak, nonatomic) IBOutlet UIView *detailView;
+- (IBAction)swipeLeft:(id)sender;
 
 @end
 
@@ -37,6 +38,7 @@
                      }];
 
     [self asyncRequest];
+    
 }
 
 - (void)asyncRequest
@@ -75,10 +77,18 @@
     
 }
 
+-(void)performSegue{
+    [self performSegueWithIdentifier:@"shopViewSegue" sender:self];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)swipeLeft:(id)sender {
+    [self populateTextViewsForDictionary];
 }
 
 @end
