@@ -45,7 +45,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GfN-yz-UIW" kind="push" identifier="hungrySegue" id="wkk-BS-cQz"/>
+                                    <segue destination="GfN-yz-UIW" kind="push" identifier="shopViewSegue" id="wkk-BS-cQz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujV-6Y-CFe">
@@ -60,7 +60,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Icu-Nw-IdD" kind="push" identifier="boredSegue" id="nZZ-BS-aoE"/>
+                                    <segue destination="Icu-Nw-IdD" kind="push" identifier="shopViewSegue" id="nZZ-BS-aoE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuV-NL-EGh">
@@ -74,7 +74,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DMp-zP-aOl" kind="push" identifier="nakedSegue" id="PmB-RX-6QQ"/>
+                                    <segue destination="DMp-zP-aOl" kind="push" identifier="shopViewSegue" id="PmB-RX-6QQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hereforbeer.io" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9S-zj-ixJ">
@@ -186,7 +186,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="487" y="28"/>
+            <point key="canvasLocation" x="586" y="28"/>
         </scene>
         <!--Bored View Controller-->
         <scene sceneID="7vz-cM-bqY">

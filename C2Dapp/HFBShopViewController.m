@@ -41,11 +41,45 @@
     // Log data in console
     NSLog(@"OMG DATA \n %@", self.results);
     
+    [self makeJSONRequest];
+    
+    //[self populateTextViewsForDictionary:self.results];
+}
+
+- (void)makeJSONRequest
+{
+    dispatch_async(
+                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       NSData* data = [NSData dataWithContentsOfURL:
+                                       [NSURL URLWithString:[NSString stringWithFormat:
+                                                             @"http://hereforbeer.io/test-google-json.json"]]];
+                       [self performSelectorOnMainThread:@selector(fetchedData:)
+                                              withObject:data waitUntilDone:YES];
+                   });
+}
+
+
+- (void)fetchedData:(NSData *)responseData {
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization
+                          JSONObjectWithData:responseData //1
+                          
+                          options:kNilOptions
+                          error:&error];
+    self.results= [json objectForKey:@"results"];
     [self populateTextViewsForDictionary];
 }
 
 - (void)populateTextViewsForDictionary {
     // Get a random object from data
+    /*int dataRange = [self.results count];
+    int random = arc4random_uniform(dataRange);
+    NSDictionary *info = [self.results objectAtIndex:random];
+    NSLog(@"IIIIIII");
+    NSLog(@"%@", info);
+    NSLog(@"JJJJJJJ");*/
+    
     int dataRange = [self.results count];
     int random = arc4random_uniform(dataRange);
     NSDictionary *info = [self.results objectAtIndex:random];
@@ -75,12 +109,12 @@
     
     // Set all other values
     
-    self.title = [info valueForKey:@"name"];
     self.shopTitle.text = [info valueForKey:@"name"];
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
     self.shopPriceValue.text = [info valueForKey:@"price_level"];
+    NSLog(@"HI");
     
-    NSLog(@"%@", self.shopTitle.text);
+    //NSLog(@"%@", self.shopTitle.text);
 }
 
 - (void)didReceiveMemoryWarning
