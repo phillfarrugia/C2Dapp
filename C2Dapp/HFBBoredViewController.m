@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *shopPriceValue;
 @property (weak, nonatomic) IBOutlet UIImageView *shopPhoto;
 @property (weak, nonatomic) IBOutlet UIView *detailView;
-- (IBAction)swipeLeft:(id)sender;
 
 @end
 
@@ -33,6 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gotoPreviousView:)];
+    swipeRight.numberOfTouchesRequired = 1;
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
     
     CGRect newFrame = self.detailView.frame;
     newFrame.origin.y += -367;    // shift down by 500pts
@@ -57,6 +61,10 @@
                        [self performSelectorOnMainThread:@selector(fetchedData:)
                                               withObject:data waitUntilDone:YES];
                    });
+}
+
+- (void)gotoPreviousView:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -86,8 +94,5 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)swipeLeft:(id)sender {
-    NSLog(@"Test");
 }
 @end

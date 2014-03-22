@@ -114,10 +114,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)goBackGesture:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (IBAction)swipeLeft:(id)sender {
     NSLog(@"Swipe Left");
     [self populateTextViewsForDictionary];

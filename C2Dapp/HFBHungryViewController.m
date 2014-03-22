@@ -29,16 +29,17 @@
 {
     [super viewDidLoad];
     
-    CGRect newFrame = self.detailView.frame;
-    newFrame.origin.y += -367;    // shift down by 500pts
-    
-    [UIView animateWithDuration:1.0
-                     animations:^{
-                         self.detailView.frame = newFrame;
-                     }];
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gotoPreviousView:)];
+    swipeRight.numberOfTouchesRequired = 1;
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
 
     [self asyncRequest];
     
+}
+
+- (void)gotoPreviousView:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)asyncRequest
@@ -89,12 +90,6 @@
 
 - (IBAction)swipeLeft:(id)sender {
     [self populateTextViewsForDictionary];
-    
-//    [UIView transitionWithView:self.view
-//                      duration:0.5
-//                       options:UIViewAnimationOptionTransitionFlipFromRight
-//                    animations:^{
-//                    } completion:nil];
 }
 
 @end

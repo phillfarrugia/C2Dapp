@@ -34,6 +34,11 @@
 {
     [super viewDidLoad];
     
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gotoPreviousView:)];
+    swipeRight.numberOfTouchesRequired = 1;
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
+    
     CGRect newFrame = self.detailView.frame;
     newFrame.origin.y += -367;    // shift down by 500pts
     
@@ -44,6 +49,10 @@
     
     // Do any additional setup after loading the view.
     [self asyncRequest];
+}
+
+- (void)gotoPreviousView:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)asyncRequest
