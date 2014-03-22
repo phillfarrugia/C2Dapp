@@ -7,8 +7,16 @@
 //
 
 #import "HFBMainViewController.h"
+#import "HFBShopViewController.h"
+#import "JSONModelLib.h"
+#import "HFBDataModel.h"
+#import "HFBFeed.h"
 
-@interface HFBMainViewController ()
+@interface HFBMainViewController () {
+
+    HFBFeed* _feed;
+
+}
 
 @end
 
@@ -26,8 +34,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Fetch Data from Google Places API
+    _feed = [[HFBFeed alloc] initFromURLWithString:@"https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&sensor=true&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc"
+                                        completion:^(JSONModel *model, JSONModelError *err) {
+                                            
+                                            // Display in console
+                                            NSLog(@"%@", _feed.results);
+                                            
+                                        }];
+    
+    
+    
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"shopViewSegue"]) {
+        HFBShopViewController *controller = (HFBShopViewController *)segue.destinationViewController;
+        
+        NSArray *results = _feed.results;
+        controller.results = results;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
