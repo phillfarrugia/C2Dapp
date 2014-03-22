@@ -38,15 +38,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Log data in console
-    NSLog(@"OMG DATA \n %@", self.results);
     
-    [self makeJSONRequest];
-    
-    //[self populateTextViewsForDictionary:self.results];
+    // Initiates Asynchronous request for Shop View Data
+    [self asyncRequest];
 }
 
-- (void)makeJSONRequest
+- (void)asyncRequest
 {
     dispatch_async(
                    dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
@@ -67,7 +64,10 @@
                           
                           options:kNilOptions
                           error:&error];
+    
     self.results= [json objectForKey:@"results"];
+    
+    // Sets values for Shop View in Storyboard from Async Data
     [self populateTextViewsForDictionary];
 }
 
@@ -77,14 +77,13 @@
     int random = arc4random_uniform(dataRange);
     NSDictionary *info = [self.results objectAtIndex:random];
     
-    
-    // Set Image First and If No Image recalculate the object Index
-    
     NSString *photoReference = [NSString stringWithFormat:@"%@",[info valueForKeyPath:@"photos.photo_reference"]];
     
     NSLog(@"PHOTO REFERENCE -- \n %@", photoReference);
     NSString *photoReferenceClean = @"";
     
+    // Checks for photo and cleans photoReference
+    // Can be deleted once empty photo shops are deleted
     if (photoReference != nil) {
         NSString *photoTrim = [[photoReference stringByReplacingOccurrencesOfString:@"(" withString:@""] stringByReplacingOccurrencesOfString:@")" withString:@""];
         photoReferenceClean = [photoTrim stringByReplacingOccurrencesOfString:@"\"" withString:@""];
@@ -92,24 +91,18 @@
         
     }
     
-    NSLog(@"%@", photoReferenceClean);
-    NSString* photoURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?photoreference=%@&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc&sensor=false&maxwidth=320", photoReferenceClean];
-    
-    NSLog(@"PHOTO URL ----- \n %@", photoURL);
-    
+    // Sets UIImageView with Photo URL from Google API
+    NSString* photoURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?photoreference=%@&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc&sensor=false&maxwidth=800", photoReferenceClean];
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:photoURL]];
     self.shopPhoto.image = [UIImage imageWithData:imageData];
     
-    // Set all other values
-    
-    NSLog(@"INFO ------ \n %@", info);
-    
+    // ToDo - Need to check if Google API key photos is nil and delete shop object from dictionary
+
     self.shopTitle.text = [info valueForKey:@"name"];
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
     
     NSString *price = [NSString stringWithFormat:@"%@", [info valueForKey:@"price_level"]];
-   self.shopPriceValue.text = price;
-    NSLog(@"HI");
+    self.shopPriceValue.text = price;
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,14 +115,4 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 @end
