@@ -14,6 +14,7 @@
 @interface HFBShopViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *shopTitle;
 @property (weak, nonatomic) IBOutlet UILabel *shopAddress;
+@property (weak, nonatomic) IBOutlet UILabel *shopPrice;
 
 @end
 
@@ -41,7 +42,8 @@
     
     self.shopTitle.text = [info valueForKey:@"name"];
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
-
+//    self.shopPrice.text = [info valueForKey:@"price_level"];
+    
 }
 
 - (void)didReceiveMemoryWarning

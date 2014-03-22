@@ -36,7 +36,7 @@
     [super viewDidLoad];
     
     // Fetch Data from Google Places API
-    _feed = [[HFBFeed alloc] initFromURLWithString:@"https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&sensor=true&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc"
+    _feed = [[HFBFeed alloc] initFromURLWithString:@"http://hereforbeer.io/test-google-json.json"
                                         completion:^(JSONModel *model, JSONModelError *err) {
                                             
                                             // Display in console

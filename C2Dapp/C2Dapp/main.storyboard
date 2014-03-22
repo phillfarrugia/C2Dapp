@@ -11,6 +11,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OwU-7S-UfO">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Aqi-lD-knm">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </toolbar>
                     <connections>
                         <segue destination="JAi-oo-ZbA" kind="relationship" relationship="rootViewController" id="Fls-kK-49Y"/>
                     </connections>
@@ -92,12 +97,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pricing:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZj-pH-8DA">
+                                <rect key="frame" x="20" y="149" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNE-Iy-Pdq">
+                                <rect key="frame" x="86" y="149" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="J4H-qu-xvq"/>
                     <connections>
                         <outlet property="shopAddress" destination="Xvs-mn-MSf" id="GP1-xh-lzc"/>
+                        <outlet property="shopPrice" destination="fNE-Iy-Pdq" id="C1p-z2-OTT"/>
+                        <outlet property="shopPriceKey" destination="iZj-pH-8DA" id="ouM-IH-fut"/>
+                        <outlet property="shopPriceValue" destination="fNE-Iy-Pdq" id="tHt-jS-3de"/>
                         <outlet property="shopTitle" destination="kZC-rz-pQb" id="j3f-ao-8Mq"/>
                     </connections>
                 </viewController>
@@ -106,6 +126,7 @@
             <point key="canvasLocation" x="586" y="28"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

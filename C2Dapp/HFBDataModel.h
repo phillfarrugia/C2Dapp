@@ -29,7 +29,7 @@
 //@property (strong, nonatomic) NSString* vicinity;
 //@property (strong, nonatomic) NSString* formatted_phone_number;
 
-//@property (assign, nonatomic) int price_level;
+//@property (strong, nonatomic) NSString<Optional>* price_level;
 //@property (assign, nonatomic) double rating;
 
 @property (strong, nonatomic) NSArray* types;
