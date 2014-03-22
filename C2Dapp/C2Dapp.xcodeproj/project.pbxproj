@@ -22,6 +22,9 @@
 		F7B6E2DB18DD160500C60E56 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B6E2BF18DD160500C60E56 /* CoreData.framework */; };
 		F7B6E2E318DD160500C60E56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7B6E2E118DD160500C60E56 /* InfoPlist.strings */; };
 		F7B6E2E518DD160500C60E56 /* C2DappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B6E2E418DD160500C60E56 /* C2DappTests.m */; };
+		F7B6E2EF18DD1D0600C60E56 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B6E2EE18DD1D0600C60E56 /* main.storyboard */; };
+		F7B6E2F518DD1D5300C60E56 /* HFBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B6E2F418DD1D5300C60E56 /* HFBMainViewController.m */; };
+		F7B6E2FC18DD231300C60E56 /* HFBNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B6E2FB18DD231300C60E56 /* HFBNavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		F7B6E2E018DD160500C60E56 /* C2DappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "C2DappTests-Info.plist"; sourceTree = "<group>"; };
 		F7B6E2E218DD160500C60E56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F7B6E2E418DD160500C60E56 /* C2DappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C2DappTests.m; sourceTree = "<group>"; };
+		F7B6E2EE18DD1D0600C60E56 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = main.storyboard; path = C2Dapp/main.storyboard; sourceTree = "<group>"; };
+		F7B6E2F318DD1D5300C60E56 /* HFBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBMainViewController.h; sourceTree = "<group>"; };
+		F7B6E2F418DD1D5300C60E56 /* HFBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBMainViewController.m; sourceTree = "<group>"; };
+		F7B6E2FA18DD231300C60E56 /* HFBNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBNavController.h; sourceTree = "<group>"; };
+		F7B6E2FB18DD231300C60E56 /* HFBNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBNavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,9 @@
 		F7B6E2AD18DD160500C60E56 = {
 			isa = PBXGroup;
 			children = (
+				F7B6E2F918DD1E8300C60E56 /* Model */,
+				F7B6E2F618DD1E4C00C60E56 /* View */,
+				F7B6E2F818DD1E7200C60E56 /* Controller */,
 				F7B6E2C118DD160500C60E56 /* C2Dapp */,
 				F7B6E2DE18DD160500C60E56 /* C2DappTests */,
 				F7B6E2B818DD160500C60E56 /* Frameworks */,
@@ -151,6 +162,32 @@
 				F7B6E2E118DD160500C60E56 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7B6E2F618DD1E4C00C60E56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7B6E2EE18DD1D0600C60E56 /* main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F7B6E2F818DD1E7200C60E56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7B6E2F318DD1D5300C60E56 /* HFBMainViewController.h */,
+				F7B6E2F418DD1D5300C60E56 /* HFBMainViewController.m */,
+				F7B6E2FA18DD231300C60E56 /* HFBNavController.h */,
+				F7B6E2FB18DD231300C60E56 /* HFBNavController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F7B6E2F918DD1E8300C60E56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7B6E2C618DD160500C60E56 /* InfoPlist.strings in Resources */,
+				F7B6E2EF18DD1D0600C60E56 /* main.storyboard in Resources */,
 				F7B6E2D118DD160500C60E56 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +289,8 @@
 			files = (
 				F7B6E2C818DD160500C60E56 /* main.m in Sources */,
 				F7B6E2CF18DD160500C60E56 /* C2Dapp.xcdatamodeld in Sources */,
+				F7B6E2FC18DD231300C60E56 /* HFBNavController.m in Sources */,
+				F7B6E2F518DD1D5300C60E56 /* HFBMainViewController.m in Sources */,
 				F7B6E2CC18DD160500C60E56 /* HFBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,8 @@
 //
 
 #import "HFBAppDelegate.h"
+#import "HFBViewController.h"
+#import "HFBNavController.h"
 
 @implementation HFBAppDelegate
 
@@ -18,6 +20,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    UIViewController *viewcontroller = [[UIStoryboard storyboardWithName:@"main" bundle:nil] instantiateViewControllerWithIdentifier:@"mainViewController"];
+    UINavigationController *navController=[[UIStoryboard storyboardWithName:@"main" bundle:nil] instantiateViewControllerWithIdentifier:@"mainNavController"];
+    
+    self.window.rootViewController=navController;
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
