@@ -9,6 +9,7 @@
 #import "JSONModel.h"
 #import "HFBGeometryModel.h"
 #import "HFBOpenHoursModel.h"
+#import "HFBPhotoModel.h"
 
 @protocol HFBDataModel @end
 
@@ -34,7 +35,7 @@
 
 @property (strong, nonatomic) NSArray* types;
 
-@property (strong, nonatomic) NSArray* photos;
+@property (strong, nonatomic) NSArray<Optional, HFBPhotoModel>* photos;
 
 // TODO: Add Photo Requests
 //@property (strong, nonatomic) NSArray* photos;

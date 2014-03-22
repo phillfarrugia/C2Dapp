@@ -10,8 +10,12 @@
 #import "JSONModelLib.h"
 #import "HFBDataModel.h"
 #import "HFBFeed.h"
+#import "HFBPhotoFeed.h"
 
-@interface HFBShopViewController ()
+@interface HFBShopViewController () {
+     HFBPhotoFeed* _photoURL;
+}
+
 @property (weak, nonatomic) IBOutlet UILabel *shopTitle;
 @property (weak, nonatomic) IBOutlet UILabel *shopAddress;
 @property (weak, nonatomic) IBOutlet UILabel *shopPrice;
@@ -46,6 +50,19 @@
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
     self.shopPriceValue.text = [info valueForKey:@"price_level"];
     
+    NSString *photoReference = [info valueForKeyPath:@"photos.photo_reference"];
+    
+    NSString* photoURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&sensor=true&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc&photoreference=%@", [info valueForKeyPath:@"photos.photo_reference"]];
+    
+    NSLog(photoURL);
+
+    // Fetch Data from Google Places API
+     _photoURL = [[HFBPhotoFeed alloc] initFromURLWithString:photoURL
+                                        completion:^(JSONModel *model, JSONModelError *err) {
+    
+                                            // Display in console
+                                            NSLog(@"%@", _photoURL);
+                                        }];
 }
 
 - (void)didReceiveMemoryWarning
