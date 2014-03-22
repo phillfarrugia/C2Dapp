@@ -46,10 +46,8 @@
     int random = arc4random_uniform(dataRange);
     NSDictionary *info = [self.results objectAtIndex:random];
     
-    self.title = [info valueForKey:@"name"];
-    self.shopTitle.text = [info valueForKey:@"name"];
-    self.shopAddress.text = [info valueForKey:@"formatted_address"];
-    self.shopPriceValue.text = [info valueForKey:@"price_level"];
+    
+    // Set Image First and If No Image recalculate the object Index
     
     NSString *photoReference = [NSString stringWithFormat:@"%@",[info valueForKeyPath:@"photos.photo_reference"]];
     
@@ -58,7 +56,7 @@
     
     if (photoReference != nil) {
         NSString *photoTrim = [[photoReference stringByReplacingOccurrencesOfString:@"(" withString:@""] stringByReplacingOccurrencesOfString:@")" withString:@""];
-         photoReferenceClean = [photoTrim stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        photoReferenceClean = [photoTrim stringByReplacingOccurrencesOfString:@"\"" withString:@""];
         photoReferenceClean = [photoReferenceClean stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
     }
@@ -70,6 +68,14 @@
     
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:photoURL]];
     self.shopPhoto.image = [UIImage imageWithData:imageData];
+    
+    // Set all other values
+    
+    self.title = [info valueForKey:@"name"];
+    self.shopTitle.text = [info valueForKey:@"name"];
+    self.shopAddress.text = [info valueForKey:@"formatted_address"];
+    self.shopPriceValue.text = [info valueForKey:@"price_level"];
+    
 }
 
 - (void)didReceiveMemoryWarning
