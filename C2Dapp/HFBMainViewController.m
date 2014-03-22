@@ -34,19 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    // Fetch Data from Google Places API
-    _feed = [[HFBFeed alloc] initFromURLWithString:@"http://hereforbeer.io/test-google-json.json"
-                                        completion:^(JSONModel *model, JSONModelError *err) {
-                                            
-                                            // Display in console
-                                            NSLog(@"%@", _feed.results);
-                                            
-                                        }];
-    
-    
-    
+    //GPS
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -57,6 +45,7 @@
         NSArray *results = _feed.results;
         controller.results = results;
     }
+    //DO GPS SENDY STUFF
 }
 
 

@@ -38,37 +38,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Initiates Asynchronous request for Shop View Data
-    [self asyncRequest];
-}
-
-- (void)asyncRequest
-{
-    dispatch_async(
-                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                   ^{
-                       NSData* data = [NSData dataWithContentsOfURL:
-                                       [NSURL URLWithString:[NSString stringWithFormat:
-                                                             @"http://hereforbeer.io/test-google-json.json"]]];
-                       [self performSelectorOnMainThread:@selector(fetchedData:)
-                                              withObject:data waitUntilDone:YES];
-                   });
-}
-
-
-- (void)fetchedData:(NSData *)responseData {
-    NSError* error;
-    NSDictionary* json = [NSJSONSerialization
-                          JSONObjectWithData:responseData //1
-                          
-                          options:kNilOptions
-                          error:&error];
-    
-    self.results= [json objectForKey:@"results"];
-    
-    // Sets values for Shop View in Storyboard from Async Data
-    [self populateTextViewsForDictionary];
 }
 
 - (void)populateTextViewsForDictionary {

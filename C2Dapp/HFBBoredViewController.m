@@ -27,6 +27,43 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self asyncRequest];
+}
+
+- (void)asyncRequest
+{
+    dispatch_async(
+                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       NSData* data = [NSData dataWithContentsOfURL:
+                                       [NSURL URLWithString:[NSString stringWithFormat:
+                                                             @"https://maps.googleapis.com/maps/api/place/textsearch/json?query=entertainment&sensor=true&radius=1000&opennow&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc"]]];
+                       [self performSelectorOnMainThread:@selector(fetchedData:)
+                                              withObject:data waitUntilDone:YES];
+                   });
+}
+
+
+- (void)fetchedData:(NSData *)responseData {
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization
+                          JSONObjectWithData:responseData //1
+                          
+                          options:kNilOptions
+                          error:&error];
+    
+    self.results= [json objectForKey:@"results"];
+    
+    // Sets values for Shop View in Storyboard from Async Data
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [super populateTextViewsForDictionary];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning
