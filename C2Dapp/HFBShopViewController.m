@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *shopAddress;
 @property (weak, nonatomic) IBOutlet UILabel *shopPrice;
 @property (weak, nonatomic) IBOutlet UILabel *shopPriceValue;
+@property (weak, nonatomic) IBOutlet UIImageView *shopPhoto;
 
 @end
 
@@ -50,19 +51,25 @@
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
     self.shopPriceValue.text = [info valueForKey:@"price_level"];
     
-    NSString *photoReference = [info valueForKeyPath:@"photos.photo_reference"];
+    NSString *photoReference = [NSString stringWithFormat:@"%@",[info valueForKeyPath:@"photos.photo_reference"]];
     
-    NSString* photoURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&sensor=true&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc&photoreference=%@", [info valueForKeyPath:@"photos.photo_reference"]];
+    NSLog(@"PHOTO REFERENCE -- \n %@", photoReference);
+    NSString *photoReferenceClean = @"";
     
-    NSLog(photoURL);
-
-    // Fetch Data from Google Places API
-     _photoURL = [[HFBPhotoFeed alloc] initFromURLWithString:photoURL
-                                        completion:^(JSONModel *model, JSONModelError *err) {
+    if (photoReference != nil) {
+        NSString *photoTrim = [[photoReference stringByReplacingOccurrencesOfString:@"(" withString:@""] stringByReplacingOccurrencesOfString:@")" withString:@""];
+         photoReferenceClean = [photoTrim stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        photoReferenceClean = [photoReferenceClean stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+    }
     
-                                            // Display in console
-                                            NSLog(@"%@", _photoURL);
-                                        }];
+    NSLog(@"%@", photoReferenceClean);
+    NSString* photoURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?photoreference=%@&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc&sensor=false&maxwidth=320", photoReferenceClean];
+    
+    NSLog(@"PHOTO URL ----- \n %@", photoURL);
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:photoURL]];
+    self.shopPhoto.image = [UIImage imageWithData:imageData];
 }
 
 - (void)didReceiveMemoryWarning

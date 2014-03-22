@@ -281,6 +281,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = hereforbeer.io;
 				TargetAttributes = {
+					F7B6E2B518DD160500C60E56 = {
+						DevelopmentTeam = 6VSG94VVFH;
+					};
 					F7B6E2D518DD160500C60E56 = {
 						TestTargetID = F7B6E2B518DD160500C60E56;
 					};
@@ -492,10 +495,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "C2Dapp/C2Dapp-Prefix.pch";
 				INFOPLIST_FILE = "C2Dapp/C2Dapp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -506,10 +512,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "C2Dapp/C2Dapp-Prefix.pch";
 				INFOPLIST_FILE = "C2Dapp/C2Dapp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
