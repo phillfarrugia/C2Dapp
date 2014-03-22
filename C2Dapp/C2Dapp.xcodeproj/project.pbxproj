@@ -12,6 +12,7 @@
 		515C1D4D18DD841E00770B81 /* HFBNakedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C1D4C18DD841E00770B81 /* HFBNakedViewController.m */; };
 		5195156D18DD66950066995A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195156C18DD66950066995A /* Media.xcassets */; };
 		63F0E5AD93CB49D48461738E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3293C82D95B4E90950EB515 /* libPods.a */; };
+		F77A360C18DE3E8100B2B53C /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F77A360B18DE3E8100B2B53C /* AppIcon.png */; };
 		F7AB7EA718DD54DD00D5FE96 /* HFBPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7EA618DD54DD00D5FE96 /* HFBPhotoModel.m */; };
 		F7AB7EAA18DD591600D5FE96 /* HFBPhotoFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7EA918DD591600D5FE96 /* HFBPhotoFeed.m */; };
 		F7B6E2BA18DD160500C60E56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B6E2B918DD160500C60E56 /* Foundation.framework */; };
@@ -60,6 +61,7 @@
 		515C1D4C18DD841E00770B81 /* HFBNakedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBNakedViewController.m; sourceTree = "<group>"; };
 		5195156C18DD66950066995A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F3293C82D95B4E90950EB515 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F77A360B18DE3E8100B2B53C /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		F7AB7EA518DD54DD00D5FE96 /* HFBPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBPhotoModel.h; sourceTree = "<group>"; };
 		F7AB7EA618DD54DD00D5FE96 /* HFBPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBPhotoModel.m; sourceTree = "<group>"; };
 		F7AB7EA818DD591600D5FE96 /* HFBPhotoFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBPhotoFeed.h; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		F7B6E2AD18DD160500C60E56 = {
 			isa = PBXGroup;
 			children = (
+				F77A360B18DE3E8100B2B53C /* AppIcon.png */,
 				F7FEAEB418DDD2B900D3F300 /* default-portrait.png */,
 				F7B6E2F918DD1E8300C60E56 /* Model */,
 				F7B6E2F618DD1E4C00C60E56 /* View */,
@@ -342,6 +345,7 @@
 			files = (
 				F7B6E2C618DD160500C60E56 /* InfoPlist.strings in Resources */,
 				F7B6E2EF18DD1D0600C60E56 /* main.storyboard in Resources */,
+				F77A360C18DE3E8100B2B53C /* AppIcon.png in Resources */,
 				5195156D18DD66950066995A /* Media.xcassets in Resources */,
 				F7E761C518DDCB9400DCD2C9 /* Images-2.xcassets in Resources */,
 				F7B6E2D118DD160500C60E56 /* Images.xcassets in Resources */,
@@ -526,7 +530,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C750BC84FE945939D431D42 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "C2Dapp/C2Dapp-Prefix.pch";
@@ -541,7 +544,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C750BC84FE945939D431D42 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "C2Dapp/C2Dapp-Prefix.pch";

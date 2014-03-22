@@ -96,9 +96,16 @@
 
     self.shopTitle.text = [info valueForKey:@"name"];
     self.shopAddress.text = [info valueForKey:@"formatted_address"];
+    self.shopPrice.text = @"Price";
     
+    if ([info valueForKey:@"price_level"] == nil) {
+        self.shopPriceValue.text = @"Unrated";
+        self.shopPrice.text = @"Price";
+    } else {
     NSString *price = [NSString stringWithFormat:@"%@", [info valueForKey:@"price_level"]];
     self.shopPriceValue.text = price;
+    self.shopPrice.text = @"Price";
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,7 +120,6 @@
 
 - (IBAction)swipeLeft:(id)sender {
     NSLog(@"Swipe Left");
-    
     [self populateTextViewsForDictionary];
 }
 
