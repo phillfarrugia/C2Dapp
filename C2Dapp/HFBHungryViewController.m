@@ -35,6 +35,14 @@
     swipeRight.numberOfTouchesRequired = 1;
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRight];
+    
+    CGRect newFrame = self.detailView.frame;
+    newFrame.origin.y += -367;    // shift down by 365pts
+    
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         self.detailView.frame = newFrame;
+                     }];
 
     [self asyncRequest];
     

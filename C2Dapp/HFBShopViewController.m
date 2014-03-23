@@ -39,7 +39,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gotoNext:)];
+    swipeLeft.numberOfTouchesRequired = 1;
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
+    
 //    [self asyncRequest];
+}
+
+- (void)gotoNext:(id)sender {
+    [self populateTextViewsForDictionary];
 }
 
 - (void)asyncRequest
@@ -116,11 +126,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)swipeLeft:(id)sender {
-    NSLog(@"Swipe Left");
-    [self populateTextViewsForDictionary];
 }
 
 @end

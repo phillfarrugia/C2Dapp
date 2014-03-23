@@ -370,11 +370,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PC9-Ya-i6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="oVC-4y-gaF">
-                    <connections>
-                        <action selector="swipeLeft:" destination="Icu-Nw-IdD" id="f45-hM-kmg"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="586" y="635"/>
         </scene>

@@ -50,6 +50,10 @@
     [self asyncRequest];
 }
 
+- (void)gotoPreviousView:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)asyncRequest
 {
     dispatch_async(
@@ -61,10 +65,6 @@
                        [self performSelectorOnMainThread:@selector(fetchedData:)
                                               withObject:data waitUntilDone:YES];
                    });
-}
-
-- (void)gotoPreviousView:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
