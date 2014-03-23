@@ -11,6 +11,8 @@
 		515C1D4A18DD841400770B81 /* HFBBoredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C1D4918DD841400770B81 /* HFBBoredViewController.m */; };
 		515C1D4D18DD841E00770B81 /* HFBNakedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C1D4C18DD841E00770B81 /* HFBNakedViewController.m */; };
 		5195156D18DD66950066995A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195156C18DD66950066995A /* Media.xcassets */; };
+		51C9469218DE7D4700F9EA34 /* HFBLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9469118DE7D4700F9EA34 /* HFBLocationViewController.m */; };
+		51C9469518DE7D9F00F9EA34 /* HFBLocationErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9469418DE7D9F00F9EA34 /* HFBLocationErrorViewController.m */; };
 		63F0E5AD93CB49D48461738E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3293C82D95B4E90950EB515 /* libPods.a */; };
 		F77A360C18DE3E8100B2B53C /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F77A360B18DE3E8100B2B53C /* AppIcon.png */; };
 		F7AB7EA718DD54DD00D5FE96 /* HFBPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7EA618DD54DD00D5FE96 /* HFBPhotoModel.m */; };
@@ -60,6 +62,10 @@
 		515C1D4B18DD841E00770B81 /* HFBNakedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBNakedViewController.h; sourceTree = "<group>"; };
 		515C1D4C18DD841E00770B81 /* HFBNakedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBNakedViewController.m; sourceTree = "<group>"; };
 		5195156C18DD66950066995A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		51C9469018DE7D4700F9EA34 /* HFBLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBLocationViewController.h; sourceTree = "<group>"; };
+		51C9469118DE7D4700F9EA34 /* HFBLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBLocationViewController.m; sourceTree = "<group>"; };
+		51C9469318DE7D9F00F9EA34 /* HFBLocationErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBLocationErrorViewController.h; sourceTree = "<group>"; };
+		51C9469418DE7D9F00F9EA34 /* HFBLocationErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBLocationErrorViewController.m; sourceTree = "<group>"; };
 		F3293C82D95B4E90950EB515 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77A360B18DE3E8100B2B53C /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		F7AB7EA518DD54DD00D5FE96 /* HFBPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBPhotoModel.h; sourceTree = "<group>"; };
@@ -242,6 +248,10 @@
 				F7B6E30A18DD39AF00C60E56 /* HFBShopViewController.m */,
 				F7B6E2FA18DD231300C60E56 /* HFBNavController.h */,
 				F7B6E2FB18DD231300C60E56 /* HFBNavController.m */,
+				51C9469018DE7D4700F9EA34 /* HFBLocationViewController.h */,
+				51C9469118DE7D4700F9EA34 /* HFBLocationViewController.m */,
+				51C9469318DE7D9F00F9EA34 /* HFBLocationErrorViewController.h */,
+				51C9469418DE7D9F00F9EA34 /* HFBLocationErrorViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -413,7 +423,9 @@
 				F7B6E2F518DD1D5300C60E56 /* HFBMainViewController.m in Sources */,
 				F7B6E30218DD300900C60E56 /* HFBFeed.m in Sources */,
 				F7B6E2CC18DD160500C60E56 /* HFBAppDelegate.m in Sources */,
+				51C9469518DE7D9F00F9EA34 /* HFBLocationErrorViewController.m in Sources */,
 				515C1D4D18DD841E00770B81 /* HFBNakedViewController.m in Sources */,
+				51C9469218DE7D4700F9EA34 /* HFBLocationViewController.m in Sources */,
 				F7AB7EAA18DD591600D5FE96 /* HFBPhotoFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
