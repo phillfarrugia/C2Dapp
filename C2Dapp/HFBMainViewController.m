@@ -38,6 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"%@",_formattedLocationString);
     
     // Hungry Icon
     FAKFontAwesome *cutleryIcon = [FAKFontAwesome cutleryIconWithSize:50];
@@ -63,7 +64,9 @@
 {
     if ([segue.identifier isEqualToString:@"shopViewSegue"]) {
         HFBShopViewController *controller = (HFBShopViewController *)segue.destinationViewController;
-        
+        controller.formattedLocationString = self.formattedLocationString;
+        controller.latitudeLocationString = self.latitudeLocationString;
+        controller.longitudeLocationString = self.longitudeLocationString;
         NSArray *results = _feed.results;
         controller.results = results;
     }

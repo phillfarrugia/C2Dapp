@@ -18,12 +18,96 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </toolbar>
                     <connections>
-                        <segue destination="JAi-oo-ZbA" kind="relationship" relationship="rootViewController" id="Fls-kK-49Y"/>
+                        <segue destination="MUs-gU-7HG" kind="relationship" relationship="rootViewController" id="ihg-Be-Phz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVA-3b-A6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-339" y="28"/>
+            <point key="canvasLocation" x="-813" y="28"/>
+        </scene>
+        <!--Location Error View Controller-->
+        <scene sceneID="1eL-dM-HAt">
+            <objects>
+                <viewController id="EnI-DQ-yV2" customClass="HFBLocationErrorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mo2-nu-pY9"/>
+                        <viewControllerLayoutGuide type="bottom" id="JLj-B2-sVY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pAE-hC-Zgg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rci-8E-Dbi">
+                                <rect key="frame" x="130" y="206" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We can't get your location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMu-vz-jb2">
+                                <rect key="frame" x="60" y="273" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hereforbeer.io/locationerror" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyh-Y9-Vht">
+                                <rect key="frame" x="67" y="302" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.63382892219999998" green="0.57998024420000005" blue="0.53719588429999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039221759999995" green="0.93725496529999996" blue="0.90588241820000004" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r6G-jU-veH"/>
+                    <connections>
+                        <outlet property="errorIcon" destination="rci-8E-Dbi" id="RjB-tF-Gf0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyh-iX-N30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336" y="-672"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="CHp-XF-upU">
+            <objects>
+                <viewController id="MUs-gU-7HG" customClass="HFBLocationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jva-CP-lea"/>
+                        <viewControllerLayoutGuide type="bottom" id="QdQ-HX-Y3v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oN8-KP-dWe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Getting Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lv-cM-5nn">
+                                <rect key="frame" x="69" y="273" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ya7-8I-x9a">
+                                <rect key="frame" x="205" y="273" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is taking longer than usual..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTe-on-JRQ">
+                                <rect key="frame" x="20" y="324" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039221759999995" green="0.93725496529999996" blue="0.90588241820000004" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fGg-W9-0ck"/>
+                    <connections>
+                        <outlet property="locationStatus" destination="DTe-on-JRQ" id="2kY-ae-uT1"/>
+                        <segue destination="JAi-oo-ZbA" kind="push" identifier="locationFoundSegue" id="kWb-47-7nU"/>
+                        <segue destination="EnI-DQ-yV2" kind="push" identifier="locationError" id="iS8-l7-Pds"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6w-Sl-h4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336" y="28"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="vf9-MN-5D4">

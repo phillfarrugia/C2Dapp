@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HFBMainViewController : UIViewController
-
+    @property(nonatomic) NSString *formattedLocationString;
+    @property(nonatomic) NSString *latitudeLocationString;
+    @property(nonatomic) NSString *longitudeLocationString;
 @end
