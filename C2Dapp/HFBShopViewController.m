@@ -69,7 +69,7 @@
     
     //
     
-    NSString *post =[[NSString alloc] initWithFormat:@"http://hereforbeer.io/hbn/index.php?command=clientresponse&bizId=%@&deviceId=%@&like=TRUE", self.busID, currentDeviceId];
+    NSString *post =[[NSString alloc] initWithFormat:@"http://hereforbeer.io/hbn/index.php?command=clientresponse&bizId=%@&deviceId=%@&like=0", self.busID, currentDeviceId];
     
     NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:post]];
     [request setHTTPMethod:@"POST"];
