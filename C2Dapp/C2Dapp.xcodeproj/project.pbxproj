@@ -13,6 +13,7 @@
 		5195156D18DD66950066995A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5195156C18DD66950066995A /* Media.xcassets */; };
 		51C9469218DE7D4700F9EA34 /* HFBLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9469118DE7D4700F9EA34 /* HFBLocationViewController.m */; };
 		51C9469518DE7D9F00F9EA34 /* HFBLocationErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9469418DE7D9F00F9EA34 /* HFBLocationErrorViewController.m */; };
+		51C9469718DE7EED00F9EA34 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C9469618DE7EED00F9EA34 /* MapKit.framework */; };
 		63F0E5AD93CB49D48461738E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3293C82D95B4E90950EB515 /* libPods.a */; };
 		F77A360C18DE3E8100B2B53C /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F77A360B18DE3E8100B2B53C /* AppIcon.png */; };
 		F7AB7EA718DD54DD00D5FE96 /* HFBPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7EA618DD54DD00D5FE96 /* HFBPhotoModel.m */; };
@@ -66,6 +67,7 @@
 		51C9469118DE7D4700F9EA34 /* HFBLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBLocationViewController.m; sourceTree = "<group>"; };
 		51C9469318DE7D9F00F9EA34 /* HFBLocationErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBLocationErrorViewController.h; sourceTree = "<group>"; };
 		51C9469418DE7D9F00F9EA34 /* HFBLocationErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFBLocationErrorViewController.m; sourceTree = "<group>"; };
+		51C9469618DE7EED00F9EA34 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F3293C82D95B4E90950EB515 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77A360B18DE3E8100B2B53C /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		F7AB7EA518DD54DD00D5FE96 /* HFBPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFBPhotoModel.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C9469718DE7EED00F9EA34 /* MapKit.framework in Frameworks */,
 				F7B6E2BC18DD160500C60E56 /* CoreGraphics.framework in Frameworks */,
 				F7B6E2C018DD160500C60E56 /* CoreData.framework in Frameworks */,
 				F7B6E2BE18DD160500C60E56 /* UIKit.framework in Frameworks */,
@@ -177,6 +180,7 @@
 		F7B6E2B818DD160500C60E56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51C9469618DE7EED00F9EA34 /* MapKit.framework */,
 				F7B6E2B918DD160500C60E56 /* Foundation.framework */,
 				F7B6E2BB18DD160500C60E56 /* CoreGraphics.framework */,
 				F7B6E2BD18DD160500C60E56 /* UIKit.framework */,

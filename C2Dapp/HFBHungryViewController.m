@@ -59,7 +59,7 @@
                    ^{
                        NSData* data = [NSData dataWithContentsOfURL:
                                        [NSURL URLWithString:[NSString stringWithFormat:
-                                                             @"https://maps.googleapis.com/maps/api/place/textsearch/json?query=food&sensor=true&radius=1000&opennow&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc"]]];
+                                                             @"https://maps.googleapis.com/maps/api/place/textsearch/json?query=clothes&sensor=true&radius=1000&location=%@&opennow&key=AIzaSyBmGfUedBA9Zm61R8KH9asr8Nf7arolcIc", super.formattedLocationString]]];
                        [self performSelectorOnMainThread:@selector(fetchedData:)
                                               withObject:data waitUntilDone:YES];
                    });
