@@ -50,6 +50,37 @@
 
 - (void)gotoNext:(id)sender {
     [self populateTextViewsForDictionary];
+    
+    UIDevice *device = [UIDevice currentDevice];
+    NSString  *currentDeviceId = [[device identifierForVendor]UUIDString];
+    
+    NSLog(@"DeviceID ---- \n %@", currentDeviceId);
+    NSLog(@"Business ID pre-post ---- \n %@", self.busID);
+    
+    //    NSString *Post = [[NSString alloc] initWithFormat:@"&bizid=%@&deviceid=%@&like=0", self.busID, currentDeviceId];
+    //
+    //    NSString *urlString = [NSString stringWithFormat:@"http://hereforbeer.io/hbn/index.php?command=clientresponse&bizid=%@&deviceid=%@&like=0", self.busID, currentDeviceId];
+    //
+    //    NSURL *url = [NSURL URLWithString:urlString];
+    //
+    //    NSLog(urlString);
+    //
+    //    NSString *post = [NSString stringWithFormat:@"&bizid=%@&deviceid=%@&like=0", self.busID, currentDeviceId];
+    
+    //
+    
+    NSString *post =[[NSString alloc] initWithFormat:@"http://hereforbeer.io/hbn/index.php?command=clientresponse&bizId=%@&deviceId=%@&like=TRUE", self.busID, currentDeviceId];
+    
+    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:post]];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[post dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    
+    NSLog(post);
+    
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
 }
 
 - (void)asyncRequest
