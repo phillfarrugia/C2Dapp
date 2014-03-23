@@ -30,6 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+
+    
     
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gotoPreviousView:)];
     swipeRight.numberOfTouchesRequired = 1;
@@ -101,17 +104,8 @@
 - (IBAction)swipeLeft:(id)sender {
     [self populateTextViewsForDictionary];
     
-    UIDevice *device = [UIDevice currentDevice];
-    NSString  *currentDeviceId = [[device identifierForVendor]UUIDString];
-    
-    NSLog(@"DeviceID ---- \n %@", currentDeviceId);
-        NSLog(@"Business ID pre-post ---- \n %@", self.busID);
-    
-//    NSString *Post = [[NSString alloc] initWithFormat:@"&bizid=%@&deviceid=%@&like=0", self.busID, currentDeviceId];
-//    
-//    NSString *urlString = [NSString stringWithFormat:@"http://hereforbeer.io/hbn/index.php?command=clientresponse&bizid=%@&deviceid=%@&like=0", self.busID, currentDeviceId];
-//    NSURL *url = [NSURL URLWithString:urlString];
 
+    
 
     
     
