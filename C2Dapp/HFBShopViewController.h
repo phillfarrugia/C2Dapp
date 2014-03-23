@@ -11,6 +11,7 @@
 @interface HFBShopViewController : UIViewController
 
 @property (strong, nonatomic) NSArray* results;
+- (IBAction)mapsButton:(id)sender;
 - (void)populateTextViewsForDictionary;
 
 @end

@@ -40,7 +40,7 @@
 
     
     CGRect newFrame = self.detailView.frame;
-    newFrame.origin.y += -367;    // shift down by 500pts
+    newFrame.origin.y += -114;    // shift down by 500pts
     
     [UIView animateWithDuration:1.0
                      animations:^{

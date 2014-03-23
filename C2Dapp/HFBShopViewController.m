@@ -80,6 +80,9 @@
     [self populateTextViewsForDictionary];
 }
 
+- (IBAction)mapsButton:(id)sender {
+}
+
 - (void)populateTextViewsForDictionary {
     
     int dataRange = [self.results count];
