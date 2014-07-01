@@ -1,10 +1,27 @@
 PODS:
+  - FontAwesomeKit (2.1.5):
+    - FontAwesomeKit/Core
+    - FontAwesomeKit/FontAwesome
+    - FontAwesomeKit/FoundationIcons
+    - FontAwesomeKit/IonIcons
+    - FontAwesomeKit/Zocial
+  - FontAwesomeKit/Core (2.1.5)
+  - FontAwesomeKit/FontAwesome (2.1.5):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.5):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.5):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.5):
+    - FontAwesomeKit/Core
   - JSONModel (0.11.0)
 
 DEPENDENCIES:
+  - FontAwesomeKit (~> 2.1.0)
   - JSONModel (~> 0.11.0)
 
 SPEC CHECKSUMS:
+  FontAwesomeKit: 7d935e100337d503bdaefde2ea16be740b81ed13
   JSONModel: a5f2eb85c46df008a67569447ec408d1040d4bf4
 
 COCOAPODS: 0.29.0

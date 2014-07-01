@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface HFBShopViewController : UIViewController
 
+@property(nonatomic) NSString *formattedLocationString;
+@property(nonatomic) NSString *latitudeLocationString;
+@property(nonatomic) NSString *longitudeLocationString;
+
 @property (strong, nonatomic) NSArray* results;
+- (IBAction)mapsButton:(id)sender;
+- (void)populateTextViewsForDictionary;
 
 @end
