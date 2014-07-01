@@ -62,7 +62,23 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"shopViewSegue"]) {
+    if ([segue.identifier isEqualToString:@"hViewSegue"]) {
+        HFBShopViewController *controller = (HFBShopViewController *)segue.destinationViewController;
+        controller.formattedLocationString = self.formattedLocationString;
+        controller.latitudeLocationString = self.latitudeLocationString;
+        controller.longitudeLocationString = self.longitudeLocationString;
+        NSArray *results = _feed.results;
+        controller.results = results;
+    }
+    if ([segue.identifier isEqualToString:@"nViewSegue"]) {
+        HFBShopViewController *controller = (HFBShopViewController *)segue.destinationViewController;
+        controller.formattedLocationString = self.formattedLocationString;
+        controller.latitudeLocationString = self.latitudeLocationString;
+        controller.longitudeLocationString = self.longitudeLocationString;
+        NSArray *results = _feed.results;
+        controller.results = results;
+    }
+    if ([segue.identifier isEqualToString:@"bViewSegue"]) {
         HFBShopViewController *controller = (HFBShopViewController *)segue.destinationViewController;
         controller.formattedLocationString = self.formattedLocationString;
         controller.latitudeLocationString = self.latitudeLocationString;
